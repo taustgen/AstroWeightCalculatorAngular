@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astro Weight Calculator</title>
+
+  </head>
+
+  <body ng-app="app">
+    <div ng-controller="HomeController as homeCtrl">
+      <h1> Astro Weight Calculator</h1>
+      <label for="weight">Your Weight</label>
+      <input type="number" ng-model="homeCtrl.weight">
+      <label for="planet">Select Your Planet</label>
+      <select  ng-model="homeCtrl.planet" ng-options="item[0] for item in homeCtrl.planets">
+
+      </select>
+      <button ng-click='homeCtrl.calculate()' >Calculate</button>
+      <p >{{homeCtrl.result}}</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript"  src="scripts/app.js" ></script>
+    <script type="text/javascript"  src="scripts/HomeController.js" ></script>
+
+
+  </body>
+</html>
